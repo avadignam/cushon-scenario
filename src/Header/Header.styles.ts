@@ -7,6 +7,7 @@ const Wrapper = styled.header`
   align-items: center;
   justify-content: space-between;
   padding: 0 2rem;
+  position: relative;
 `;
 
 const Cushon = styled.a`
@@ -17,10 +18,21 @@ const Cushon = styled.a`
   color: ${({ theme }) => theme.ACCENT_TEXT};
 `;
 
-const User = styled.div`
+const User = styled.button`
+  all: unset;
+  cursor: pointer;
   color: ${({ theme }) => theme.ACCENT_TEXT};
+  padding: 0.5rem;
+  border-radius: ${({ theme }) => theme.BORDER_RADIUS};
   > i {
     padding-left: 1rem;
+  }
+  transition: 0.2s all ease;
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+  }
+  &:focus {
+    outline: 2px solid ${({ theme }) => theme.ACCENT_TEXT};
   }
 `;
 

@@ -3,7 +3,6 @@ import s from "./RetailUser.styles";
 import { Select, SelectOption } from "../Common/Select/Select";
 import { Input } from "../Common/Input/Input";
 import { Button } from "../Common/Button/Button";
-import funds from "../Responses/funds.json";
 import { useStore } from "../StoreProvider/StoreProvider";
 import dayjs from "dayjs";
 
@@ -13,7 +12,7 @@ interface CreateInvestmentRequest {
 }
 
 export const RetailUser = () => {
-  const { investments, setInvestments } = useStore();
+  const { investments, setInvestments, funds } = useStore();
   const [investment, setInvestment] = useState<CreateInvestmentRequest>({
     fundId: "",
     amount: 0,

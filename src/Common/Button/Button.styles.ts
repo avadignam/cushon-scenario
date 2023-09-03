@@ -9,7 +9,7 @@ const Button = styled.button<ButtonProps>`
   cursor: pointer;
   background-color: ${({ theme }) => theme.ACCENT};
   color: ${({ theme }) => theme.ACCENT_TEXT};
-  min-width: 5rem;
+  min-width: 5em;
   display: flex;
   justify-content: center;
   align-items: center;

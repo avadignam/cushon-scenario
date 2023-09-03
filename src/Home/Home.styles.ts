@@ -5,6 +5,9 @@ const Wrapper = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  height: calc(100vh - 5rem);
+  gap: 3rem;
+  font-size: 2rem;
 `;
 
 const ButtonsWrapper = styled.div`

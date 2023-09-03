@@ -7,6 +7,7 @@ const Wrapper = styled.div`
   gap: 3rem;
   justify-content: center;
   align-items: center;
+  height: calc(100vh - 5rem);
 `;
 
 const Text = styled.div`

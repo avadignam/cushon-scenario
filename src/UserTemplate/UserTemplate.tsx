@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import s from "./UserTemplate.styles";
 import { Route, Routes, useLocation, useNavigate } from "react-router-dom";
 import { RetailUser } from "../RetailUser/RetailUser";
-import { EnterpriseUser } from "../EnterpriseUser/EnterpriseUser";
 import { Button } from "../Common/Button/Button";
+import { UnderConstruction } from "../Common/UnderConstruction/UnderConstruction";
 
 export const UserTemplate = () => {
   const { pathname } = useLocation();
@@ -31,7 +31,7 @@ export const UserTemplate = () => {
       </s.FirstSection>
       <Routes>
         <Route path="/retail" element={<RetailUser />} />
-        <Route path="/enterprise" element={<EnterpriseUser />} />
+        <Route path="/enterprise" element={<UnderConstruction />} />
       </Routes>
     </s.Wrapper>
   );

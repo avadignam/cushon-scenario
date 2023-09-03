@@ -2,6 +2,7 @@ import "styled-components";
 
 interface CushonThemeModel {
   ACCENT: string;
+  TRANSPARENT_ACCENT: string;
   TEXT: string;
   ACCENT_TEXT: string;
   BORDER_RADIUS: string;
@@ -13,6 +14,7 @@ interface CushonThemeModel {
 
 export const CushonTheme: CushonThemeModel = {
   ACCENT: "rgb(211, 66, 142)",
+  TRANSPARENT_ACCENT: "rgba(211, 66, 142, 0.2)",
   TEXT: "rgb(72, 72, 72)",
   ACCENT_TEXT: "rgb(255, 255, 255)",
   BORDER_RADIUS: "10px",
