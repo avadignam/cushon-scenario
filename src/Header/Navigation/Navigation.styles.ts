@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { styled } from "styled-components";
 
 const Wrapper = styled.div`
@@ -40,7 +41,7 @@ const Option = styled.li`
   padding: 1rem 0;
 `;
 
-const OptionLink = styled.a`
+const OptionLink = styled(Link)`
   all: unset;
   cursor: pointer;
   &:focus {

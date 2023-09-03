@@ -29,9 +29,9 @@ export const Select: React.FC<Props> = ({
       aria-labelledby={ariaLabelledBy}
       onChange={(e) => onSelect(e.target.value)}
       placeholder={placeholder}
-      defaultValue=""
+      defaultValue="none"
     >
-      <option value="" placeholder={placeholder} disabled hidden>
+      <option value="none" placeholder={placeholder} disabled>
         {placeholder}
       </option>
       {items.map((item) => (

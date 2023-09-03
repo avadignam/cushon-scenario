@@ -15,6 +15,7 @@ interface Props {
 export const Navigation: React.FC<Props> = ({ onClose }) => {
   const { user } = useStore();
   const navOptions: NavOption = {
+    "New Investment": "/",
     "My Account": "/account",
     "My Investments": "/investments",
     Settings: "/settings",
@@ -30,8 +31,8 @@ export const Navigation: React.FC<Props> = ({ onClose }) => {
       </s.Header>
       <s.Options>
         {Object.keys(navOptions).map((option) => (
-          <s.Option>
-            <s.OptionLink href={navOptions[option]}>{option}</s.OptionLink>
+          <s.Option key={option}>
+            <s.OptionLink to={navOptions[option]}>{option}</s.OptionLink>
           </s.Option>
         ))}
       </s.Options>

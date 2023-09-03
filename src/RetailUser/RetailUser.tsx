@@ -14,7 +14,7 @@ interface CreateInvestmentRequest {
 export const RetailUser = () => {
   const { investments, setInvestments, funds } = useStore();
   const [investment, setInvestment] = useState<CreateInvestmentRequest>({
-    fundId: "",
+    fundId: "none",
     amount: 0,
   });
   const [fundError, setFundError] = useState(false);
@@ -23,7 +23,7 @@ export const RetailUser = () => {
   setTimeout(() => setSuccess(false), 5000);
   console.log(investments);
   const handleInvest = () => {
-    if (investment.fundId.length === 0) {
+    if (investment.fundId === "none") {
       setFundError(true);
       return;
     }
@@ -31,6 +31,7 @@ export const RetailUser = () => {
       setAmountError(true);
       return;
     }
+    // API call would go here
     setFundError(false);
     setAmountError(false);
     setSuccess(true);
@@ -42,7 +43,7 @@ export const RetailUser = () => {
         id: (investments.length + 1).toString(),
       },
     ]);
-    setInvestment({ fundId: "", amount: 0 });
+    setInvestment({ fundId: "none", amount: 0 });
   };
 
   return (

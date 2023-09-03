@@ -4,7 +4,7 @@ import React, {
   useContext,
   useState,
 } from "react";
-import { Dayjs } from "dayjs";
+import dayjs, { Dayjs } from "dayjs";
 import user from "../Responses/user.json";
 import funds from "../Responses/funds.json";
 import { SelectOption } from "../Common/Select/Select";
@@ -38,7 +38,9 @@ export const StoreCtx = createContext<StoreContextInterface>({
 });
 
 export const StoreProvider: React.FC<PropsWithChildren> = ({ children }) => {
-  const [investments, setInvestments] = useState<Investment[]>([]);
+  const [investments, setInvestments] = useState<Investment[]>([
+    { id: "1", fundId: "1", amount: 100, createdAt: dayjs(new Date()) },
+  ]);
   const value: StoreContextInterface = {
     investments,
     setInvestments,
