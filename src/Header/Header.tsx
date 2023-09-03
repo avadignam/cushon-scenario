@@ -8,7 +8,7 @@ import { useStore } from "../StoreProvider/StoreProvider";
 export const Header = () => {
   const { user, investments } = useStore();
   const [showNavigation, setShowNavigation] = useState(false);
-  console.log(investments);
+
   return (
     <>
       <s.Wrapper>

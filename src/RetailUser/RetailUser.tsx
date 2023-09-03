@@ -21,7 +21,7 @@ export const RetailUser = () => {
   const [amountError, setAmountError] = useState(false);
   const [success, setSuccess] = useState(false);
   setTimeout(() => setSuccess(false), 5000);
-  console.log(investments);
+
   const handleInvest = () => {
     if (investment.fundId === "none") {
       setFundError(true);
