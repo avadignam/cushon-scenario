@@ -15,7 +15,7 @@ const Button = styled.button<ButtonProps>`
   align-items: center;
   padding: 0.5rem;
   border-radius: ${({ theme }) => theme.BORDER_RADIUS};
-  transition: 0.2s all ease;
+  transition: ${({ theme }) => theme.TRANSITION};
   &:hover,
   &:focus {
     outline: 2px solid ${({ theme }) => theme.ACCENT};

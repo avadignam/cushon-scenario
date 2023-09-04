@@ -10,6 +10,7 @@ interface CushonThemeModel {
   BORDER: string;
   ERROR: string;
   SUCCESS: string;
+  TRANSITION: string;
 }
 
 export const CushonTheme: CushonThemeModel = {
@@ -22,6 +23,7 @@ export const CushonTheme: CushonThemeModel = {
   BORDER: "rgb(226, 226, 226)",
   ERROR: "rgb(255, 0, 0)",
   SUCCESS: "rgb(145, 179, 130)",
+  TRANSITION: "0.2s all ease",
 };
 
 declare module "styled-components" {

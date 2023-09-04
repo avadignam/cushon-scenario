@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { styled } from "styled-components";
 
-const Wrapper = styled.div`
+const Wrapper = styled.nav`
   position: absolute;
   right: 0;
   top: 5rem;
@@ -25,7 +25,8 @@ const CloseButton = styled.button`
   all: unset;
   cursor: pointer;
   border-radius: ${({ theme }) => theme.BORDER_RADIUS};
-  &:focus {
+  &:focus,
+  &:focus-visible {
     outline: 2px outline ${({ theme }) => theme.ACCENT};
   }
 `;
@@ -44,12 +45,13 @@ const Option = styled.li`
 const OptionLink = styled(Link)`
   all: unset;
   cursor: pointer;
-  &:focus {
+  &:focus,
+  &:focus-visible {
     outline: 2px outline ${({ theme }) => theme.ACCENT};
   }
   border-radius: ${({ theme }) => theme.BORDER_RADIUS};
   padding: 0.5rem;
-  transition: 0.2s all ease;
+  transition: ${({ theme }) => theme.TRANSITION};
   &:hover {
     background-color: ${({ theme }) => theme.TRANSPARENT_ACCENT};
   }

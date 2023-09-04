@@ -1,6 +1,6 @@
 import { styled } from "styled-components";
 
-const Wrapper = styled.header`
+const Wrapper = styled.div`
   background-color: ${({ theme }) => theme.ACCENT};
   height: 5rem;
   display: flex;
@@ -16,6 +16,11 @@ const Cushon = styled.a`
   font-size: 2rem;
   font-weight: bold;
   color: ${({ theme }) => theme.ACCENT_TEXT};
+  padding: 0.5rem;
+  border-radius: ${({ theme }) => theme.BORDER_RADIUS};
+  &:focus {
+    outline: 2px solid ${({ theme }) => theme.ACCENT_TEXT};
+  }
 `;
 
 const User = styled.button`
@@ -27,7 +32,7 @@ const User = styled.button`
   > i {
     padding-left: 1rem;
   }
-  transition: 0.2s all ease;
+  transition: ${({ theme }) => theme.TRANSITION};
   &:hover {
     background-color: rgba(255, 255, 255, 0.3);
   }
