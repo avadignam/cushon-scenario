@@ -36,7 +36,7 @@ const User = styled.button`
   &:hover {
     background-color: rgba(255, 255, 255, 0.3);
   }
-  &:focus {
+  &:focus-visible {
     outline: 2px solid ${({ theme }) => theme.ACCENT_TEXT};
   }
 `;

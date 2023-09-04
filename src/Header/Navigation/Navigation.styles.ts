@@ -25,7 +25,6 @@ const CloseButton = styled.button`
   all: unset;
   cursor: pointer;
   border-radius: ${({ theme }) => theme.BORDER_RADIUS};
-  &:focus,
   &:focus-visible {
     outline: 2px outline ${({ theme }) => theme.ACCENT};
   }
