@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import s from "./Navigation.styles";
 import { useStore } from "../../StoreProvider/StoreProvider";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -20,6 +20,16 @@ export const Navigation: React.FC<Props> = ({ onClose }) => {
     "My Investments": "/investments",
     Settings: "/settings",
   };
+
+  useEffect(() => {
+    const handleClose = (e: KeyboardEvent) => {
+      if (e.key === "Escape") {
+        onClose();
+      }
+    };
+    window.addEventListener("keydown", handleClose);
+    return () => window.removeEventListener("keydown", handleClose);
+  });
 
   return (
     <s.Wrapper>
